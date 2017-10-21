@@ -56,6 +56,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTransforms\DataTransformFunctionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\TransitRouteTest.cs" />
     <Compile Include="Routes\DuplicationRouteTest.cs" />
@@ -72,6 +73,7 @@
       <Name>MtrCore</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

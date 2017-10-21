@@ -29,6 +29,18 @@ namespace MtrCoreTest.Routes
         }
 
         [TestMethod]
+        public void TrueFloatFlow()
+        {
+            Assert.IsTrue(IsFlow(0.0f, TRUE_PORT));
+        }
+
+        [TestMethod]
+        public void FalseFloatFlow()
+        {
+            Assert.IsTrue(IsFlow(0.001f, FALSE_PORT));
+        }
+
+        [TestMethod]
         public void TestLabelConsistent()
         {
             var isTrueLabel = false;
@@ -63,6 +75,15 @@ namespace MtrCoreTest.Routes
             return resultPortId == TRUE_PORT;
         }
 
+        public bool IsFlow(float data, int _port)
+        {
+            var resultPortId = -1;
+
+            PostprocessPacketFloat(data, (port, packet) => resultPortId = port);
+
+            return resultPortId == _port;
+        }
+
         public void PostprocessPacket(int data, Action<int, IPacket> onOutQueueAction)
         {
             var inputPacket = Mock.Of<IPacket>();
@@ -79,6 +100,24 @@ namespace MtrCoreTest.Routes
             var route = new SwitchZeroRoute(TRUE_LABEL, TRUE_PORT, FALSE_LABEl, FALSE_PORT);
 
             route.Route(inputPacket, Core);;
+        }
+
+        public void PostprocessPacketFloat(float data, Action<int, IPacket> onOutQueueAction)
+        {
+            var inputPacket = Mock.Of<IPacket>();
+            inputPacket.Data = BitConverter.ToInt32(BitConverter.GetBytes(data), 0);
+
+            var outPortBlockMock = new Mock<IOutPortBlock>();
+            outPortBlockMock
+                .Setup(t => t.Enqueue(It.IsAny<int>(), It.IsAny<IPacket>()))
+                .Callback(onOutQueueAction);
+
+            var Core = Mock.Of<ICore>();
+            Core.OutPorts = outPortBlockMock.Object;
+
+            var route = new SwitchZeroRoute(TRUE_LABEL, TRUE_PORT, FALSE_LABEl, FALSE_PORT, true);
+
+            route.Route(inputPacket, Core); ;
         }
     }
 }
