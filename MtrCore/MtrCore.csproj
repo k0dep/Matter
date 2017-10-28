@@ -40,14 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Impl\Common\StructureComposer.cs" />
+    <Compile Include="Impl\Common\StructureCompressor.cs" />
+    <Compile Include="Impl\Common\StructureDecompressor.cs" />
     <Compile Include="Impl\DataTransformer.cs" />
     <Compile Include="Impl\Port.cs" />
     <Compile Include="Impl\Router.cs" />
     <Compile Include="Impl\RouterTable.cs" />
     <Compile Include="Impl\Routes\BufferRiseRoute.cs" />
     <Compile Include="Impl\Routes\DuplicationRoute.cs" />
+    <Compile Include="Impl\Routes\Factories\ProgrammRouteAttribute.cs" />
+    <Compile Include="Impl\Routes\Factories\ProgramRouteAutoFactory.cs" />
+    <Compile Include="Impl\Routes\ProgramRoutes\ProgramMathFunction.cs" />
+    <Compile Include="Impl\Routes\ProgramRoutes\ProgramZeroSwitchRoute.cs" />
+    <Compile Include="Interfaces\IRouteFactory.cs" />
     <Compile Include="Impl\Routes\MathFunctionRoute.cs" />
-    <Compile Include="Impl\Routes\PartnerPacketWaiter.cs" />
+    <Compile Include="Impl\Common\PartnerPacketWaiter.cs" />
+    <Compile Include="Impl\Routes\ProgramRoutes\ProgramDuplicationRoute.cs" />
+    <Compile Include="Impl\Routes\ProgramRoutes\ProgramTransitRoute.cs" />
+    <Compile Include="Impl\Routes\ProgreammRoute.cs" />
     <Compile Include="Impl\Routes\SwitchZeroRoute.cs" />
     <Compile Include="Impl\Routes\TransitRoute.cs" />
     <Compile Include="Interfaces\ICore.cs" />

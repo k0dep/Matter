@@ -1,5 +1,4 @@
-﻿using System;
-using MatterCore;
+﻿using MatterCore;
 using MatterCore.Impl;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

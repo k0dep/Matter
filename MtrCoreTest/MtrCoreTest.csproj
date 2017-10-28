@@ -51,11 +51,17 @@
     <Reference Include="Moq, Version=4.7.142.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\packages\Moq.4.7.142\lib\net45\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\StructureComposerTest.cs" />
+    <Compile Include="Common\StructureCompressorTest.cs" />
+    <Compile Include="Common\StructureDecompressor.cs" />
     <Compile Include="DataTransforms\DataTransformFunctionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\TransitRouteTest.cs" />
@@ -63,6 +69,7 @@
     <Compile Include="Routes\SwitchZeroRouteTest.cs" />
     <Compile Include="Routes\MathFunctionRoutetest.cs" />
     <Compile Include="Routes\BufferRiseRouteTest.cs" />
+    <Compile Include="Routes\ProgrammRouteTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

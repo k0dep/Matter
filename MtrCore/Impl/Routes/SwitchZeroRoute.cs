@@ -13,12 +13,19 @@ namespace MatterCore.Routes
         public int NotZeroEqualLabel { get; set; }
         public int NotZeroEqualPort { get; set; }
 
-        public SwitchZeroRoute(int zeroEqualLabel, int zeroEqualPort, int notZeroEqualLabel, int notZeroEqualPort, bool dataIsFloat = false, float epsilon = 0.000001f)
+        public SwitchZeroRoute(
+            int zeroEqualLabel,
+            int zeroEqualPort,
+            int notZeroEqualLabel,
+            int notZeroEqualPort,
+            bool dataIsFloat = false,
+            float epsilon = 0.000001f)
         {
             ZeroEqualLabel = zeroEqualLabel;
             ZeroEqualPort = zeroEqualPort;
             NotZeroEqualLabel = notZeroEqualLabel;
             NotZeroEqualPort = notZeroEqualPort;
+            DataIsFloat = dataIsFloat;
             Epsilon = epsilon;
         }
 

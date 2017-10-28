@@ -26,7 +26,6 @@
             var branchBPacket = PacketFactory.Create();
             branchBPacket.Label = BranchBLabel;
             branchBPacket.Data = packet.Data;
-            branchBPacket.Programm = packet.Programm;
 
             core.OutPorts.Enqueue(BranchAPort, packet);
             core.OutPorts.Enqueue(BranchBPort, branchBPacket);
