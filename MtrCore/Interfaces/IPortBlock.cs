@@ -3,19 +3,21 @@ using System.Collections.Generic;
 
 namespace MatterCore
 {
-    public interface IPortBlock
+    public interface IInPortBlock
     {
-        IList<IPort> Ports { get; set; }
-    }
+        IList<IInPort> Ports { get; }
 
-    public interface IInPortBlock : IPortBlock
-    {
         IPacket DequeuePacket();
         IEnumerable<IPacket> AllInQueue();
+        int Count();
+        void Connect(int selfPort, IOutPortBlock ports, int targetPort);
     }
 
-    public interface IOutPortBlock : IPortBlock
+    public interface IOutPortBlock
     {
+        IList<IOutPort> Ports { get; }
+
         void Enqueue(int port, IPacket packet);
+        void Connect(int selfPort, IInPortBlock ports, int targetPort);
     }
 }

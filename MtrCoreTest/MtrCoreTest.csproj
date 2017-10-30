@@ -63,6 +63,7 @@
     <Compile Include="Common\StructureCompressorTest.cs" />
     <Compile Include="Common\StructureDecompressor.cs" />
     <Compile Include="DataTransforms\DataTransformFunctionTests.cs" />
+    <Compile Include="Ports\PortBlockTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\TransitRouteTest.cs" />
     <Compile Include="Routes\DuplicationRouteTest.cs" />

@@ -45,6 +45,7 @@
     <Compile Include="Impl\Common\StructureDecompressor.cs" />
     <Compile Include="Impl\DataTransformer.cs" />
     <Compile Include="Impl\Port.cs" />
+    <Compile Include="Impl\Ports\PortBlock.cs" />
     <Compile Include="Impl\Router.cs" />
     <Compile Include="Impl\RouterTable.cs" />
     <Compile Include="Impl\Routes\BufferRiseRoute.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Impl\Routes\Factories\ProgramRouteAutoFactory.cs" />
     <Compile Include="Impl\Routes\ProgramRoutes\ProgramMathFunction.cs" />
     <Compile Include="Impl\Routes\ProgramRoutes\ProgramZeroSwitchRoute.cs" />
+    <Compile Include="Interfaces\IPortFactory.cs" />
     <Compile Include="Interfaces\IRouteFactory.cs" />
     <Compile Include="Impl\Routes\MathFunctionRoute.cs" />
     <Compile Include="Impl\Common\PartnerPacketWaiter.cs" />
