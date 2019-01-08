@@ -65,6 +65,7 @@
     <Compile Include="DataTransforms\DataTransformFunctionTests.cs" />
     <Compile Include="Ports\PortBlockTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CoreTest.cs" />
     <Compile Include="Routes\TransitRouteTest.cs" />
     <Compile Include="Routes\DuplicationRouteTest.cs" />
     <Compile Include="Routes\SwitchZeroRouteTest.cs" />

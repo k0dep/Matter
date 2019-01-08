@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace MatterCore
 {
@@ -10,5 +9,9 @@ namespace MatterCore
         IRouter Router { get; set; }
         ISet<IPacket> WaitedPackets { get; set; }
         IDataTransformer DataTransformer { get; set; }
+
+        void TickInput();
+        void TickMiddle();
+        void TickOutput();
     }
 }

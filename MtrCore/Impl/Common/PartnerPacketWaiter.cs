@@ -21,5 +21,10 @@ namespace MtrCore.Impl.Routes
             packets.Remove(packet);
             return packet;
         }
+
+        public IPacket Peek(int label, ISet<IPacket> packets)
+        {
+            return packets.First(p => p.Label == label);
+        }
     }
 }

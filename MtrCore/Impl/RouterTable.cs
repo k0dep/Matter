@@ -6,6 +6,7 @@ namespace MatterCore.Impl
     {
         public Dictionary<int, IRoute> Table { get; set; } = new Dictionary<int, IRoute>();
 
+        public RouterTable() => Table = new Dictionary<int, IRoute>();
         public RouterTable(Dictionary<int, IRoute> table) => Table = table;
 
         public IRoute GetRoute(int label)

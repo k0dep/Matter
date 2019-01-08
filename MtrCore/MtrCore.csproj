@@ -43,7 +43,9 @@
     <Compile Include="Impl\Common\StructureComposer.cs" />
     <Compile Include="Impl\Common\StructureCompressor.cs" />
     <Compile Include="Impl\Common\StructureDecompressor.cs" />
+    <Compile Include="Impl\Core\Core.cs" />
     <Compile Include="Impl\DataTransformer.cs" />
+    <Compile Include="Impl\Packet.cs" />
     <Compile Include="Impl\Port.cs" />
     <Compile Include="Impl\Ports\PortBlock.cs" />
     <Compile Include="Impl\Router.cs" />

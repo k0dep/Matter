@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.Generic;
+using MtrCore.Core;
 
 namespace MatterCore.Impl
 {
@@ -12,6 +13,7 @@ namespace MatterCore.Impl
 
         public void RoutePacket(IPacket packet, ICore core)
         {
+            Table.GetRoute(packet.Label).Route(packet, core);
         }
     }
 }

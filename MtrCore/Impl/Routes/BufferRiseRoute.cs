@@ -24,7 +24,11 @@ namespace MtrCore.Impl.Routes
         public void Route(IPacket packet, ICore core)
         {
             if (PartnerWaiter.Exists(PartnerLabel, core.WaitedPackets))
-                PartnerRoute.Route(PartnerWaiter.Pop(PartnerLabel, core.WaitedPackets), core);
+            {
+                var partnerPakcet = PartnerWaiter.Pop(PartnerLabel, core.WaitedPackets);
+                core.WaitedPackets.Add(packet);
+                PartnerRoute.Route(partnerPakcet, core);
+            }
             else
                 core.WaitedPackets.Add(packet);
         }
